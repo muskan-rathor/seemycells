@@ -1,0 +1,115 @@
+.navbar {
+    position: fixed; /* Fix the navbar to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", sans-serif;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.navbar-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-logo {
+    height: 6vh;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar-right {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3vw;
+    margin-right: 210px;
+}
+
+.nav-item {
+    color: #455A64;
+    font-size: 1.3rem; /* Increased font size */
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Optional: to match Hero section */
+}
+
+.nav-item:hover {
+    color: #23C8AC; /* Optional: color on hover */
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #23C8AC; /* Green underline */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.login-button {
+    background-color: transparent;
+    border: 2px solid #23C8AC;
+    color: #23C8AC;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-button:hover {
+    background-color: #23C8AC;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 3vw;
+    }
+
+    .navbar-left {
+        flex: 1;
+    }
+
+    .navbar-logo {
+        height: 5vh;
+    }
+
+    .navbar-right {
+        flex: 2;
+        gap: 2vw;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .login-button {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}

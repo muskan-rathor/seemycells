@@ -1,0 +1,377 @@
+/* Result Container */
+.result-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.result-header {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.result-title {
+  color: #455A64;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.result-timestamp {
+  color: #6b7c87;
+  font-size: 1rem;
+}
+
+/* Tabs Navigation */
+.result-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #64748b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  color: #23C8AC;
+  border-bottom-color: #23C8AC;
+}
+
+.tab-btn:hover:not(.active) {
+  color: #1DAE94;
+}
+
+/* Tab Content */
+.tab-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* Summary View */
+.summary-card {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.summary-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.metric-label {
+  display: block;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  display: block;
+  color: #455A64;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.metric-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.metric-status.normal {
+  color: #23C8AC;
+}
+
+/* Detailed View */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.results-table th, 
+.results-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.results-table th {
+  color: #64748b;
+  font-weight: 600;
+  background: #f8fafc;
+}
+
+.status-normal {
+  color: #23C8AC;
+  font-weight: 500;
+}
+
+/* Visualization */
+.chart-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 2rem;
+}
+
+/* Image Preview */
+.image-preview {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primary-btn {
+  background-color: #23C8AC;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #1DAE94;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(35, 200, 172, 0.2);
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #455A64;
+  border: 2px solid #e2e8f0;
+}
+
+.secondary-btn:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-icon {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Loading State */
+.result-loading {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.loading-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Error State */
+.error-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-icon {
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .result-container {
+    padding: 1rem;
+  }
+
+  .result-title {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .result-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+}
+
+/* Add to result.css */
+.result-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@media print {
+  .result-tabs,
+  .result-actions {
+    display: none !important;
+  }
+  
+  .result-container {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .tab-content {
+    display: block !important;
+  }
+  
+  .result-summary,
+  .result-details,
+  .result-visualization {
+    display: block !important;
+    page-break-after: always;
+  }
+}
+
+
+/* Patient Info Styles */
+.patient-info {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.patient-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #455A64;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Update result-header styles */
+.result-header {
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+/* Update table styles to include patient name */
+.results-table tr:first-child td {
+  font-weight: 600;
+  background-color: #f8fafc;
+  border-bottom: 2px solid #e0e6ed;
+}
+
+.results-table tr:first-child td {
+  padding-top: 1.5rem;
+}
+
+
+/* Speech Button Styles */
+.speech-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+.speech-btn:hover {
+  color: #23C8AC;
+}
+
+.speech-btn.active {
+  color: #23C8AC;
+}
+
+/* Result Tabs Container */
+.result-tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .btn, .tab-btn, .speech-btn {
+    transition: none;
+  }
+}
+
+/* Print styles for speech button */
+@media print {
+  .speech-btn {
+    display: none !important;
+  }
+}
