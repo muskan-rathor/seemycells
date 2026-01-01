@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import './result.css';
+import './Result.css';
 import Navbar from "../../components/Navbar/Navbar";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ClipLoader } from "react-spinners";
