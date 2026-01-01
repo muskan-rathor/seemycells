@@ -79,8 +79,11 @@ export default function Upload() {
     formData.append('image', image);
     formData.append('patientName', patientName);
 
+
+
+    
     try {
-      const response = await fetch('http://127.0.0.1:5000/predict', {
+      const response = await fetch('https://seemycells-backend-0chb.onrender.com/', {
         method: 'POST',
         body: formData,
       });
