@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './upload.css';
+import './Upload.css';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import { MdUpload, MdCancel, MdCheckCircle, MdPerson } from 'react-icons/md';
