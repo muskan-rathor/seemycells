@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)  # Allow frontend to access backend
 
 # Load your trained YOLO model
-model = YOLO("best.pt")
+model = YOLO("model/best.pt")
 
 # ─── WARM‑UP ────────────────────────────────────────────────────────────────
 # Run one dummy inference to load weights into memory / compile kernels
