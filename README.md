@@ -88,8 +88,6 @@ Click “Analyze Image”
 View detection results (RBC, WBC, Platelets)
 
 
-## 🎥 Demo Video
-👉 [Watch Full Demo](https://drive.google.com/file/d/10ikpBAMeBbwNVZVJmA9Hn5w5tjo_nShf/view?usp=drive_link)
 
 
 ✨ Credits
