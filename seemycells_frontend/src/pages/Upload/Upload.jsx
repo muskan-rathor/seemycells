@@ -83,10 +83,11 @@ export default function Upload() {
 
     
     try {
-      const response = await fetch('https://seemycells-backend-0chb.onrender.com/', {
-        method: 'POST',
-        body: formData,
-      });
+      const API_URL = import.meta.env.VITE_API_URL || 'https://seemycells-backend-0chb.onrender.com';
+const response = await fetch(`${API_URL}/predict`, {
+  method: 'POST',
+  body: formData,
+});
 
       if (!response.ok) {
         throw new Error(`Server responded with ${response.status}`);
